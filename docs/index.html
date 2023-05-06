@@ -1,3 +1,20 @@
+<script>
+  $(document).ready(function(){
+    $('button.btn-extend').click(function(){
+      $('.player-screen').addClass("active");
+    });
+    $('button.btn-close').click(function(){
+      $('.player-screen').removeClass("active");
+    });
+  });
+  
+  const player = document.querySelector('.player');
+  const playButton = document.getElementById('play-button');
+  
+  playButton.addEventListener('click', () => {
+    player.classList.toggle('active');
+  });
+</script>
 <link rel="stylesheet" href="style.css">
 <div class="music-app">
     <div class="cover">
@@ -140,22 +157,4 @@
     var seconds = Math.floor(time % 60);
     return (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
-</script>
-
-<script>
-  $(document).ready(function(){
-    $('button.btn-extend').click(function(){
-      $('.player-screen').addClass("active");
-    });
-    $('button.btn-close').click(function(){
-      $('.player-screen').removeClass("active");
-    });
-  });
-  
-  const player = document.querySelector('.player');
-  const playButton = document.getElementById('play-button');
-  
-  playButton.addEventListener('click', () => {
-    player.classList.toggle('active');
-  });
 </script>
