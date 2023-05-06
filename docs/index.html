@@ -124,6 +124,7 @@
       button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>';
     }
   }
+
   
   audio.addEventListener('timeupdate', function() {
     var duration = audio.duration;
@@ -139,6 +140,9 @@
     var seconds = Math.floor(time % 60);
     return (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
+</script>
+
+<script>
   $(document).ready(function(){
     $('button.btn-extend').click(function(){
       $('.player-screen').addClass("active");
