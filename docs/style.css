@@ -59,11 +59,6 @@ img {
   width: 420px;
   height: 650px;
 }
-
-.music-app.active {
-  animation: shadow-pulse 4.2s infinite;
-}
-
 @keyframes shadow-pulse {
   0% {
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5) inset, 0 0 50px 10px #FF0000, 0 0 5px 0.2px #Fee140, 0 0 5px 0.2px #Fee140;
@@ -75,10 +70,9 @@ img {
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5) inset, 0 0 50px 10px #FF0000, 0 0 5px 0.2px #Fee140, 0 0 5px 0.2px #Fee140;
   }
 }
-.music-app.active .player {
-  animation: spin 10s linear infinite;
+.music-app .player.active {
+  animation: shadow-pulse 4.2s infinite;
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -94,6 +88,7 @@ img {
     border-radius: 0;
   }
 }
+
 .cover {
   position: relative;
   width: 100%;
