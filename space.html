@@ -1,0 +1,142 @@
+
+<div class="music-app">
+    <div class="cover">
+      <div class="artist"></div>
+      </button>
+    </div>
+    <div class="content">
+      <div class="content-header">
+        <span class="content-title">Geo <code>#0016</code></span>
+    
+  </button>
+      </div>
+      <ul class="playlist">
+        <li class="list-item">
+          <img class="list-item-image" src="https://www.svgrepo.com/show/513487/id-card.svg" alt="song">
+          <div class="list-item-info">
+            <div class="info-title">About me <svg class="flowerStar-1GeTsn" aria-hidden="false" width="16" height="16" viewBox="0 0 16 15.2"><</svg></div>
+            <div class="info-subtitle">MX - 25 Y - Multimedia designer, filmmaker.</div>
+          </div>
+          </button>
+        </li>
+        <li class="list-item">
+          <img class="list-item-image" src="https://www.svgrepo.com/show/475412/game.svg" alt="song">
+          <div class="list-item-info">
+            <div class="info-title">Games</div>
+            <div class="info-subtitle">Soul's like games, KH, Lol, Persona, OW, DmC, GH, TES, Omori, Doom. </div>
+          </div>
+        </li>
+        <li class="list-item">
+          <img class="list-item-image" src="https://www.wallpapertip.com/wmimgs/75-756616_spotify-logo.jpg" alt="song">
+          <div class="list-item-info">
+            <div class="info-title">Music</div>
+            <div class="info-subtitle">Joji, bbno$, Convolk, Metric, Bloc Party, Interpol, Nothing but thieves, Porter Robinson, D4vd, Fats'e, Rebzzyx, King Krule, Slowthai.</div>
+          </div>
+        </li>
+      </ul>
+      <div class="content-header">
+        <span class="content-title">Friends</span>
+      </div>
+      <div class="album-list">
+        <div class="album-wrapper">
+          <img src="https://media.discordapp.net/attachments/1012050794096382002/1104303392404291604/SPACE-.png?width=454&height=454" alt="album" class="album-cover">
+          <div class="list-item-info">
+            <div class="info-title">Val.<code>#0001</code></div>
+            <div class="info-subtitle">xincoherent</div>
+          </div>
+        </div>
+        <div class="album-wrapper">
+          <img src="https://media.discordapp.net/attachments/608564059310129152/1104302117516234822/lwFQWxj.jpg?width=317&height=317" alt="album" class="album-cover">
+          <div class="list-item-info">
+            <div class="info-title">Kami.<code>#0000</code></div>
+            <div class="info-subtitle">Neuroticism</div>
+          </div>
+        </div>
+        <div class="album-wrapper">
+          <img src="https://static.vecteezy.com/system/resources/previews/000/440/531/original/question-mark-vector-icon.jpg" alt="album" class="album-cover">
+          <div class="list-item-info">
+            <div class="info-title"><code></code></div>
+            <div class="info-subtitle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <div class="player">
+    <button class="btn btn-extend">
+    </button>
+    <div class="player-top-content">
+      <img class="list-item-image" src="https://pbs.twimg.com/media/EuJXNvzXEAM-l8F.jpg" alt="song">
+      <div class="list-item-info">
+        <div class="info-title">help herself</div>
+        <div class="info-subtitle">bbno$, Diamond Pistols</div>
+      </div>
+      <div class="buttons-wrapper">
+        <button class="btn btn-play" onclick="toggleAudio()" id="play-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play" fill="currentColor">
+            <path d="M5 3l14 9-14 9V3z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="player"></div>
+    <div class="proggress-part">
+      <span class="time">00:00</span>
+      <div class="proggres-bar">
+        <span class="progress"></span>
+      </div>
+      <span class="time"></span>
+    </div>
+  </div>
+  
+    <div class="player-screen">
+      <button class="btn btn-close">
+      </button>
+      <span class="top-text">Listening now</span>
+      <div class="cover-wrapper">
+        <img class="cover-shadow" src="https://pbs.twimg.com/media/EuJXNvzXEAM-l8F.jpg">
+        <img  class="cover-img" src="https://pbs.twimg.com/media/EuJXNvzXEAM-l8F.jpg">
+      </div>
+      <div class="song-info">
+        <p class="song-title">help herself</p>
+        <p class="song-subtitle">bbno$, Diamond Pistols</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+   var audio = new Audio('https://dl.sndup.net/r6kq/bbno$%20-%20help%20herself.mp3');
+  var progress = document.querySelector('.progress');
+  var progressBar = document.querySelector('.proggres-bar');
+  var currentTime = document.querySelectorAll('.time')[0];
+  var durationTime = document.querySelectorAll('.time')[1];
+  
+  function toggleAudio() {
+    var button = document.querySelector('.btn-play');
+    var player = document.querySelector('#player');
+    if (audio.paused) {
+      audio.play();
+      player.appendChild(audio);
+      button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pause" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
+    } else {
+      audio.pause();
+      button.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-play" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg>';
+    }
+  }
+  
+  audio.addEventListener('timeupdate', function() {
+    var duration = audio.duration;
+    var currentTimeVal = audio.currentTime;
+    var progressWidth = (currentTimeVal / duration) * 100;
+    progress.style.width = progressWidth + '%';
+    currentTime.textContent = formatTime(currentTimeVal);
+    durationTime.textContent = formatTime(duration);
+  });
+  
+  function formatTime(time) {
+    var minutes = Math.floor(time / 60);
+    var seconds = Math.floor(time % 60);
+    return (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+  }
+  </script>
