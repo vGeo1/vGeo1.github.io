@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="index.scss">
+<link rel="stylesheet" href="style.css">
 <div class="music-app">
     <div class="cover">
       <div class="artist"></div>
@@ -139,10 +139,6 @@
     var seconds = Math.floor(time % 60);
     return (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
   }
-
-</script>
-
-  <script>
   $(document).ready(function(){
     $('button.btn-extend').click(function(){
       $('.player-screen').addClass("active");
